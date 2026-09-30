@@ -1,0 +1,39 @@
+# Kursbuch Informatik — Hugo configuration
+# Theme: Relearn 9.1.x (pinned; requires Hugo >= 0.165.0)
+
+baseURL = 'https://glandl.github.io/Coursebook-maker-reise-grade-9/'
+title = 'Kursbuch Informatik'
+theme = 'hugo-theme-relearn'
+defaultContentLanguage = 'de'
+
+# `print` activates the theme's feature to print whole chapters or leaf pages;
+# search is handled internally by the theme since 7.0.0 and no longer needs
+# dedicated output formats declared here.
+[outputs]
+  home = ['html', 'rss', 'print']
+  section = ['html', 'rss', 'print']
+  page = ['html', 'rss', 'print']
+
+[languages]
+  [languages.de]
+    locale = 'de-AT'
+    label = 'Deutsch'
+    title = 'Kursbuch Informatik'
+    weight = 1
+  [languages.en]
+    locale = 'en'
+    label = 'English'
+    title = 'Coursebook Informatics'
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    # CSS-class-based highlighting so Relearn theme variants can style code
+    noClasses = false
+
+[params]
+  themeVariant = ['auto', 'relearn-light', 'relearn-dark']
+  collapsibleMenu = true
+  showVisitedLinks = true
+  # breadcrumb + title separator defaults are fine; features like math/mermaid
+  # load automatically per page when their shortcodes/codefences are used
