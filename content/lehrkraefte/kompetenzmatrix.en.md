@@ -3,104 +3,124 @@ title = "Competency Matrix"
 weight = 1
 +++
 
-This page is the coursebook's **curriculum evidence**: for each of the **27 competencies** from the *Lehrplan für Informatik und KI* (the Austrian curriculum for computer science and AI), it shows the **exact wording**, the stated grade/semester, and the project or self-study path that covers it.
+This page shows how the coursebook's projects cover every competency in the curriculum for the compulsory subject "Informatik und Künstliche Intelligenz" (Computer Science and AI, grades 9–11). For each grade, it gives a short description of the projects and a matrix listing the curriculum wording, the semester assignment and the project that secures each competency.
 
-**Note:** German is the source of truth for the exact legal wording. This English page is a working translation for orientation; where in doubt, defer to the German page.
+**Note:** German is the source of truth for the exact curriculum wording. The English wording below is a working translation for orientation; where in doubt, defer to the German page.
 
-## Status legend
+## Framework
 
-🟢 written in the coursebook · 🟡 project/path started, content in progress · 🔴 stub page only, content open
+- **Time:** 1 lesson per week, taught as a double lesson (100 min) every second week, which gives **15 blocks per grade**. Holidays and cancellations are already subtracted.
+- **Projects:** 3–4 projects per grade of 3–4 blocks each. Every project leads to a visible result.
+- **Core and extensions:** All students work on the **core**, and the core alone secures the competencies. Each project has 2–3 **extensions** for faster or especially interested students; these are not relevant to the competencies.
+- **Spiral curriculum:** Each grade builds directly on the previous one (grade 10 assumes grade 9, grade 11 assumes grade 10).
+- **Semester assignment:** The semester given in the curriculum is a default. The focus lies in that semester, and preparing or revisiting the topic in the other semester is allowed.
+- **Hardware:** Every hardware project can be completed entirely with a **simulator**.
+- **Tools:** One text-based programming language across all three grades, plus Markdown (9), SQL with a file-based database (10), and HTML/CSS/JavaScript with a small web server framework (11).
 
-## 01 Data and Information
+**Legend:** ● competency is developed in the core of this project · ○ competency is revisited and deepened
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | examine and name the path of data from collection to analysis, and by which actors it is used and collected for which purposes. | [P2 Weather Station]({{% relref "projekte/p2-wetterstation" %}}) | 🔴 |
-| 10 | SS | carry out simple data modeling and queries and combine data from data stores. | [P4 Data Detectives]({{% relref "projekte/p4-datendetektive" %}}) (data for ML also in P3) | 🔴 |
+## Grade 9
 
-## 02 Algorithms and Data Structures, Programming
+**Common thread:** The measurement data from P9.2 feeds the AI model in P9.3, and P9.4 reuses material from P9.1–P9.3.
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | implement algorithms in a text-based programming language for simple applications. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
-| 10 | WS | implement algorithms using suitable data structures. | [Self-study: Data Structures]({{% relref "selbstlernen/datenstrukturen" %}}) + practice in P3/P4 | 🔴 |
-| 11 | SS | improve/correct given program code where needed. | [Self-study: Code Quality & Refactoring]({{% relref "selbstlernen/code-qualitaet" %}}) + code reviews in all projects | 🔴 |
-| 11 | SS | compare algorithms using simple runtime estimates (recursive and non-recursive) and name an example of a non-computable problem. | [Self-study: Runtime & Algorithm Analysis]({{% relref "selbstlernen/laufzeit-algorithmenanalyse" %}}) | 🔴 |
+### Projects
 
-## 03 Artificial Intelligence
+**P9.1 Reaction Game** (blocks 1–4)
+: Students use a microcontroller or simulator to build a reaction game or mini gadget with a button, LED and buzzer. They first model its behavior as a state diagram and only then program it in a text-based programming language.
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | create, apply and evaluate simple AI models with the help of an algorithm, and assess AI systems for their suitability as well as ethical and inclusive aspects. | [P3 AI Lab]({{% relref "projekte/p3-ki-labor" %}}) | 🔴 |
-| 10 | WS | carry out basic machine learning methods step by step using suitable algorithms and explain how they work. | [P3 AI Lab]({{% relref "projekte/p3-ki-labor" %}}) | 🔴 |
-| 11 | WS | explain the basic functioning of neural networks and generative AI, analyze their results (including errors and bias), and reflect on the effects of AI on the world of work. | [P3 AI Lab]({{% relref "projekte/p3-ki-labor" %}}) | 🔴 |
-| 11 | WS | compare AI application areas and justify which method is suitable for a given problem type. | [P3 AI Lab]({{% relref "projekte/p3-ki-labor" %}}) | 🔴 |
+**P9.2 Classroom Climate Station** (blocks 5–8)
+: A sensor measures temperature, noise or light in the classroom and sends the readings over the local network to a class computer. The class traces the path of the data and the actors involved, works out when measurements become personal data, and weighs the measurement interval against energy consumption.
 
-## 04 Computer Systems
+**P9.3 Open the Window? – Decision Tree** (blocks 9–12)
+: Students build a decision tree from their own measurement data, first by hand and then with an algorithm. They use training and test data to determine the error rate. Finally, they assess a real AI system for suitability as well as ethical and inclusive aspects.
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 10 | WS | configure computer systems with peripherals, sensors or actuators as well as basic network functionality, and use them for real-world tasks. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) (device) + [P2 Weather Station]({{% relref "projekte/p2-wetterstation" %}}) (network) | 🟡 |
+**P9.4 Tech Fair** (blocks 13–15)
+: Each group designs a project page or poster in Markdown with a separate layout, using openly licensed media correctly. Students match the tasks from their own projects to IT career fields.
 
-## 05 Networks and Communication
+### Matrix
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | explain the basic idea of local networks and simple protocols, and independently integrate a device into a local network. | [P2 Weather Station]({{% relref "projekte/p2-wetterstation" %}}) | 🔴 |
-| 11 | WS | explain different models for network communication (e.g. stateless/connection-oriented) and analyze network-based services, giving reasoned judgment on which technical prerequisites are needed for reliable use. | [P5 Web Portfolio]({{% relref "projekte/p5-web-portfolio" %}}) (deepened in [Self-study: Layer Model]({{% relref "selbstlernen/stufenmodell" %}})) | 🔴 |
+| Area | Competency (curriculum wording, translated) | Sem. | P9.1 | P9.2 | P9.3 | P9.4 |
+| --- | --- | --- | :---: | :---: | :---: | :---: |
+| 01 | examine and name the path of data from collection to analysis, and by which actors it is used and collected for which purposes. | WS+SS | | ● | ○ | |
+| 02 | implement algorithms in a text-based programming language for simple applications. | WS+SS | ● | | | |
+| 03 | create, apply and evaluate simple AI models with the help of an algorithm, and assess AI systems for their suitability as well as ethical and inclusive aspects. | WS+SS | | | ● | |
+| 05 | explain the basic idea of local networks and simple protocols, and independently connect a device to a local network. | WS+SS | | ● | | |
+| 08 | create and adapt digital artifacts while separating form and content, and reuse them responsibly with regard to intellectual property. | WS+SS | | | | ● |
+| 09 | abstract and model real objects or situations in a state-based and process-oriented way. | WS+SS | ● | | | |
+| 10 | describe the spheres of privacy under the GDPR and justify their own behavior in the context of their everyday lives. | WS+SS | | ● | | |
+| 11 | explain which technical factors (e.g. computing power, data transfer, storage) influence the energy and resource consumption of digital systems, and design systems sustainably. | WS+SS | | ● | | |
+| 11 | describe the central career fields of computer science and information technology, assign typical tasks to them, and explain where computer science and AI play a role in (working) life and in society. | WS+SS | | | | ● |
 
-## 06 Human-Computer Interaction
+## Grade 10
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 10 | WS | build simple interactive systems and examine and explain their system behavior by varying inputs and feedback. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
-| 11 | WS | describe and compare forms of interaction with computer systems and give reasoned judgment on their use for diverse user groups. | [Self-study: Forms of Interaction]({{% relref "selbstlernen/interaktionsformen" %}}) | 🔴 |
+**Common thread:** The device from P10.1 supplies the data for P10.2. WS = blocks 1–7, SS = blocks 8–15.
 
-## 07 Design and Development
+### Projects
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 10 | SS | follow requirements for software or technical systems expressed in natural language and simple graphical notations. | [P5 Web Portfolio]({{% relref "projekte/p5-web-portfolio" %}}) (practiced from the P1 kickoff onward) | 🔴 |
+**P10.1 Smart Home in a Shoebox** (blocks 1–3, WS)
+: Students configure a microcontroller or simulator with sensors and actuators and make it controllable over the network. They investigate the system's behavior by varying thresholds, feedback and reaction times.
 
-## 08 Digital Creativity
+**P10.2 The Device Learns** (blocks 4–7, WS)
+: Sensor or gesture data is stored in suitable data structures (list/ring buffer, dictionary, table). Students work through a perceptron step by step, first on paper and then in code, and use it to control the device. A short, hands-on run through clustering (e.g. k-means on 2D points) shows how to handle unlabeled data.
+: *Time-critical:* 2–3 blocks for the perceptron, clustering only briefly.
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | create and adapt digital artifacts observing the separation of form and content, and reuse them responsibly with regard to intellectual property. | [P5 Web Portfolio]({{% relref "projekte/p5-web-portfolio" %}}) (journal from P1 onward) | 🔴 |
-| 10 | SS | produce multimedia artifacts with different approaches for groups of users (including inclusion), and justify the principles used. | [P5 Web Portfolio]({{% relref "projekte/p5-web-portfolio" %}}) | 🔴 |
-| 11 | SS | design simple web-based applications, distinguish client-side and server-side parts, and adapt existing web artifacts in a targeted way. | [P5 Web Portfolio]({{% relref "projekte/p5-web-portfolio" %}}) | 🔴 |
+**P10.3 Our Own Platform** (blocks 8–11, SS)
+: The requirements for a mini social network are given as user stories plus a use-case and class diagram, and students work through them. From these, the class derives a data model, writes SQL queries and joins tables. Alongside this, students look at how platforms and identity systems are built, at participation in society, and at EU rules on AI.
 
-## 09 Modeling and Simulation
+**P10.4 Secret Messages & Explainer Video** (blocks 12–15, SS)
+: Students encrypt messages by hand with a simple symmetric cipher (e.g. XOR or Vigenère) and work through small numeric examples of asymmetric key exchange (e.g. Diffie-Hellman) or encryption/signatures (e.g. RSA). They compare authentication methods (password, second factor, e-government ID), weighing security against usability. The result is an accessible multimedia explainer for a target group of their choice.
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | abstract and model real objects or situations in a state-based and process-oriented way. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
+### Matrix
 
-## 10 Privacy, Security and Protection
+| Area | Competency (curriculum wording, translated) | Sem. | P10.1 | P10.2 | P10.3 | P10.4 |
+| --- | --- | --- | :---: | :---: | :---: | :---: |
+| 01 | carry out simple data modeling and queries and combine data from data stores. | SS | | | ● | |
+| 02 | implement algorithms using suitable data structures. | WS | | ● | | |
+| 03 | carry out basic machine learning methods step by step using suitable algorithms and explain how they work. | WS | | ● | | |
+| 04 | configure computer systems with peripherals, sensors or actuators and basic network functionality, and use them for everyday tasks. | WS | ● | | | |
+| 06 | build simple interactive systems and investigate and explain their behavior by varying inputs and feedback. | WS | ● | | | |
+| 07 | understand requirements for software or technical systems expressed in natural language and simple graphical notations. | SS | | | ● | |
+| 08 | create multimedia artifacts with different forms of access for different user groups (including with regard to inclusion) and justify the principles used. | SS | | | | ● |
+| 10 | apply and explain different symmetric and asymmetric encryption and authentication methods, and weigh their advantages and disadvantages regarding security, usability and privacy in different social and legal contexts. | SS | | | | ● |
+| 11 | explain how digital infrastructures (e.g. identity systems, platforms, e-government services, social media) are technically built and enable or limit participation in society, and assess the opportunities and risks of digital infrastructures. | SS | | | ● | |
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | describe the spheres of privacy under GDPR and justify one's own behavior in the context of one's own life. | [P4 Data Detectives]({{% relref "projekte/p4-datendetektive" %}}) | 🔴 |
-| 10 | SS | apply and explain different symmetric and asymmetric encryption and authentication methods, and weigh their advantages and disadvantages regarding security, usability and privacy in different social and legal contexts. | [P4 Data Detectives]({{% relref "projekte/p4-datendetektive" %}}) | 🔴 |
-| 11 | SS | explain the principles of Open Source Intelligence (OSINT), and derive new information from one's own digital footprint. | [P4 Data Detectives]({{% relref "projekte/p4-datendetektive" %}}) | 🔴 |
+## Grade 11
 
-## 11 Responsibility and Self-Determination
+**Common thread:** The assistant is designed in P11.2 and built in P11.3. WS = blocks 1–8, SS = blocks 9–15.
 
-| Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
-| --- | --- | --- | --- | --- |
-| 9 | WS+SS | explain which technical factors (e.g. computing power, data transfer, storage) affect the energy and resource consumption of digital systems, and design systems sustainably. | [P2 Weather Station]({{% relref "projekte/p2-wetterstation" %}}) | 🔴 |
-| 9 | — | describe central career fields of computer science and IT, assign typical tasks, and explain where computer science and AI play a role in (professional) daily life and in society. | [Self-study: Career Fields & Ethics]({{% relref "selbstlernen/berufsfelder-ethik" %}}) | 🔴 |
-| 10 | SS | explain how digital infrastructures (e.g. identity systems, platforms, eGovernment services, social media) are technically built and enable or limit societal participation, and give a reasoned assessment of the opportunities and risks of digital infrastructures. | [P3 AI Lab]({{% relref "projekte/p3-ki-labor" %}}) | 🔴 |
-| 11 | WS | sketch out computer systems considering different given interests and human needs, including from ethical and inclusive perspectives. | [Self-study: Career Fields & Ethics]({{% relref "selbstlernen/berufsfelder-ethik" %}}) + reflection in P3/P5 | 🔴 |
+### Projects
 
-## Coverage by project/path
+**P11.1 A Look Inside AI** (blocks 1–4, WS)
+: Students first work through forward propagation in a mini network by hand or in a spreadsheet, then implement it in code. They test generative AI systematically and document errors and biases. An overview of "which method for which problem?" draws on the methods from grades 9 and 10. To finish, the class reflects on the effects of AI on the world of work.
 
-| Target | Number of competencies |
-| --- | --- |
-| P1 Code & Gadget | 4 |
-| P2 Weather Station / IoT | 3 |
-| P3 AI Lab | 5 |
-| P4 Data Detectives | 4 |
-| P5 Web Portfolio | 5 |
-| Self-study (6 paths) | 6 |
-| **Total** | **27** |
+**P11.2 An Assistant for Everyone** (blocks 5–8, WS)
+: The class sketches an information system for the school that takes the interests of different groups into account from ethical and inclusive perspectives. Students compare forms of interaction and build paper prototypes in quick rounds. In a focused observation task (≈ 1 block), they compare two provided demo apps — a single data lookup (e.g. a page that reloads data on each click) and a video call with a persistent connection — by briefly interrupting the network connection and observing what happens in each case. From this they derive which technical requirements (retries, timeouts, reconnection) are needed for reliable use.
+
+**P11.3 The Assistant Goes Online** (blocks 9–12, SS)
+: Students build part of the P11.2 design as a small web app. They start from a given, faulty initial version and correct and improve its code. Along the way, they separate client and server parts and adapt the existing layout. While debugging stuck code, they run into the question of whether a program will ever finish or just needs more time; this motivates the halting problem as an example of a non-computable problem.
+
+**P11.4 Data Detectives** (blocks 13–15, SS)
+: Students learn the principles of OSINT and derive new information from their own (or a fictional) data footprint. In a guessing game played in pairs, they search for a name in a sorted list (e.g. a class list or phone book): one partner answers only "earlier" or "later" in the alphabet. They play once guessing in sequence (linear) and once always guessing the midpoint of the remaining range (binary), and compare how many questions each needs. Using provided code for linear search and a recursive and an iterative version of binary search, they then test the same idea on a larger dataset and measure the running time.
+
+### Matrix
+
+| Area | Competency (curriculum wording, translated) | Sem. | P11.1 | P11.2 | P11.3 | P11.4 |
+| --- | --- | --- | :---: | :---: | :---: | :---: |
+| 02 | improve/correct given program code where needed. | SS | | | ● | |
+| 02 | compare algorithms using simple runtime estimates (recursive and non-recursive) and name an example of a non-computable problem. | SS | | | ● | ● |
+| 03 | explain the basic functioning of neural networks and generative AI, analyze their results (including errors and bias), and reflect on the effects of AI on the world of work. | WS | ● | | | |
+| 03 | compare AI application areas and justify which method is suitable for a given problem type. | WS | ● | | | |
+| 05 | explain different models of network communication (e.g. stateless/connection-oriented), analyze network-based services, and assess which technical requirements are needed for reliable use. | WS | | ● | | |
+| 06 | describe and compare forms of interaction with computer systems and classify their use for diverse user groups with justification. | WS | | ● | | |
+| 08 | design simple web-based applications, distinguish client-side and server-side parts, and adapt existing web artifacts in a targeted way. | SS | | | ● | |
+| 10 | explain the principles of open source intelligence (OSINT) and derive new information from their own data footprint. | SS | | | | ● |
+| 11 | sketch computer systems that take different given interests and human needs into account, including from ethical and inclusive perspectives. | WS | | ● | | |
+
+## Overview
+
+| Grade | Projects | Blocks | Competencies covered |
+| --- | --- | --- | --- |
+| 9 | P9.1–P9.4 | 15 | 9 / 9 |
+| 10 | P10.1–P10.4 | 15 | 9 / 9 |
+| 11 | P11.1–P11.4 | 15 | 9 / 9 |
+| **Total** | **12** | **45** | **27 / 27** |
